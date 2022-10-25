@@ -1,0 +1,15 @@
+{% extends 'laia_outliers/base.html' %}
+{% block title %}LAIA Outliers{% endblock %}
+
+{% block content %}
+
+<p>Faça upload do arquivo csv:</p>
+
+<form method="POST" class="post-form" enctype="multipart/form-data">  
+    {% csrf_token %}  
+    {{ form.as_p }}  
+    <button type="submit" class="upload btn btn-default">Upload</button>  
+</form>
+
+      
+{% endblock %}
